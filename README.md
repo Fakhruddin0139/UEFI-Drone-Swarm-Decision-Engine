@@ -63,6 +63,14 @@ The math decides. Not the code.
 
 ---
 
+### Core Components
+- **GNSS Parser** — Real NMEA 0183 parsing with Best Available Fix scoring
+- **Waypoint Engine** — Integer-only Equirectangular distance calculation
+- **Swarm State Management** — Custom `SWARM_DRONE` struct with health, fuel, weapons, priority, and sensor data
+- **Decision Engine** — Hybrid scoring formula with heartbeat watchdog
+
+---
+
 ## Technical Architecture
 
 ### MissionValue Scoring Formula
@@ -278,7 +286,8 @@ If you're in the industry and see potential here —
 I'm open to challenges, tasks, and collaboration.
 
 **MD Fakhruddin**
-B.Tech CSE '26 | Ex-DRDO Intern (ITR, Chandipur)
+B.Tech CSE '26 | Ex-DRDO Intern (ITR, Chandipur) | Passionate about low-level systems, firmware development, 
+and autonomous technologies.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/fakhruddin3a)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/Fakhruddin0139)

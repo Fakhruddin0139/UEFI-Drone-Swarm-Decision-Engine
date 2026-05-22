@@ -9,19 +9,9 @@ Zero operating system.
 
 ---
 
-## What This Is
+## Overview
 
-This is **Menu 7** of a multi-menu UEFI firmware application.
-
-A swarm of 5 drones — Payload Carrier, Escorts, and Scouts — operates in 
-formation toward a target waypoint. When a missile threat is detected, the 
-system evaluates every drone's combat value in real time and mathematically 
-selects the most expendable unit to break formation and intercept the threat.
-
-The payload carrier is never sacrificed unless critically damaged.
-The weakest scout always goes first.
-No human command needed. No operating system involved.
-
+This project extends a custom UEFI application with a complete **autonomous drone swarm decision-making system**. It demonstrates real-time telemetry processing, sensor-based damage detection, and intelligent cooperative behavior in a resource-constrained bare-metal environment.
 
 
 ---

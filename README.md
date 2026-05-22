@@ -5,7 +5,7 @@
 
 Built in pure C using EDK2. Zero standard libraries. Zero floating-point math.
 Zero operating system.
-> ⚠️ **Educational simulation only.** Runs in QEMU virtual machine with hardcoded dummy data. No real hardware, weapons, or classified information involved.
+>  **Educational simulation only.** Runs in QEMU virtual machine with hardcoded dummy data. No real hardware, weapons, or classified information involved.
 
 ---
 
@@ -32,15 +32,15 @@ No human command needed. No operating system involved.
 <img width="972" height="645" alt="swarm_status" src="https://github.com/user-attachments/assets/cf518e00-e347-41fb-83ee-dd21d155d745" />
 
 **Bullet Hit Simulation:**
-<img width="708" height="398" alt="bullet_hit" src="https://github.com/user-attachments/assets/f6714b19-dc39-47d8-8403-07dd8bcecb6e" />
+<img width="972" height="398" alt="bullet_hit" src="https://github.com/user-attachments/assets/f6714b19-dc39-47d8-8403-07dd8bcecb6e" />
 
 
 **Sacrifice Order Issued:**
-<img width="846" height="658" alt="sacrifice_order" src="https://github.com/user-attachments/assets/e3ecd3a2-ad7e-4a11-a945-ad422063cf1f" />
+<img width="972" height="658" alt="sacrifice_order" src="https://github.com/user-attachments/assets/e3ecd3a2-ad7e-4a11-a945-ad422063cf1f" />
 
 
 **Swarm Reset:**
-<img width="770" height="475" alt="reset" src="https://github.com/user-attachments/assets/5060af7a-71cb-4086-8c42-5d32edb0b2cf" />
+<img width="972" height="475" alt="reset" src="https://github.com/user-attachments/assets/5060af7a-71cb-4086-8c42-5d32edb0b2cf" />
 
 
 ---

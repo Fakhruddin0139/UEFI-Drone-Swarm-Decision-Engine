@@ -5,6 +5,7 @@
 
 Built in pure C using EDK2. Zero standard libraries. Zero floating-point math.
 Zero operating system.
+> ⚠️ **Educational simulation only.** Runs in QEMU virtual machine with hardcoded dummy data. No real hardware, weapons, or classified information involved.
 
 ---
 
@@ -21,9 +22,7 @@ The payload carrier is never sacrificed unless critically damaged.
 The weakest scout always goes first.
 No human command needed. No operating system involved.
 
-> **Educational simulation only.**
-> Runs in QEMU virtual machine with hardcoded dummy data.
-> No real hardware, weapons, or classified information involved.
+
 
 ---
 
@@ -207,7 +206,6 @@ UEFICalculator.efi
 UEFI-Drone-Swarm-Decision-Engine/
 ├── UEFICalculator.c        # Complete firmware source (3170 lines)
 ├── UEFICalculator.inf      # EDK2 module definition
-├── screenshots/            # QEMU demo screenshots
 └── README.md               # This file
 ```
 
@@ -264,7 +262,7 @@ Phase 6 → Threat Response Engine   ← Planned
 
 ## Architecture Decision Log
 
-Major technical decisions made during development:
+Major technical decisions and the reasoning behind each:
 
 | Decision | Options | Chosen | Reason |
 |----------|---------|--------|--------|

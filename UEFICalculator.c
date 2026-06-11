@@ -1,6 +1,7 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
+#include <Library/BaseMemoryLib.h>
 #include <Library/BaseLib.h>
 #include <Library/UefiRuntimeServicesTableLib.h>
 #include <Protocol/SerialIo.h>
@@ -1870,6 +1871,7 @@ typedef struct
     INTN HdopDec;      // 9  (decimal part)
     BOOLEAN Valid;     // TRUE if successfully parsed
 } GNSS_DATA;
+#include "DroneSwarm/DroneSwarm.h"
 
 // Convert NMEA coordinate string to degrees and minutes
 // Input:  "4807.038"  → LatDeg=48, LatMin=7, LatSec=3 (scaled)
@@ -1881,7 +1883,7 @@ VOID ConvertNMEACoord(
     INTN *Min,
     INTN *Sec) // decimal part of minutes scaled x100
 {
-    (VOID)IsLon;
+    (VOID) IsLon;
     *Deg = 0;
     *Min = 0;
     *Sec = 0;
@@ -2537,6 +2539,39 @@ VOID GnssMenu()
         }
     }
 }
+
+// ============================================================
+//   DRONE SWARM SIMULATOR - Menu 7
+//   Phase 2: Drone Swarm Decision Engine
+// ============================================================
+
+// ── Safe math helpers (no stdlib) ───────────────────────────
+INTN GetMax(INTN a, INTN b)
+{
+    return (a > b) ? a : b;
+}
+
+INTN GetMin(INTN a, INTN b)
+{
+    return (a < b) ? a : b;
+}
+
+INTN AbsVal(INTN a)
+{
+    return (a < 0) ? -a : a;
+}
+
+INTN Clamp(INTN Value, INTN Min, INTN Max)
+{
+    if (Value < Min)
+        return Min;
+    if (Value > Max)
+        return Max;
+    return Value;
+}
+
+#include "DroneSwarm/DroneSwarm.c"
+
 // Main Entry Point
 EFI_STATUS
 EFIAPI
@@ -2560,7 +2595,8 @@ UefiMain(
         Print(L"  [4] Encryption Tools\n");
         Print(L"  [5] Pattern Renderer\n");
         Print(L"  [6] GNSS Telemetry\n");
-        Print(L"  [7] Exit\n\n");
+        Print(L"  [7] Drone Swarm Simulator\n");
+        Print(L"  [8] Exit\n\n");
 
         Print(L"Select option: ");
 
@@ -2584,12 +2620,13 @@ UefiMain(
         case 5:
             PatternRenderer();
             break;
-
         case 6:
             GnssMenu();
             break;
-
         case 7:
+            DroneSwarmMenu();
+            break;
+        case 8:
             Print(L"\nThank you for using UEFI Demo Suite!\n");
             Running = FALSE;
             break;
